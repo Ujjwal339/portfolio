@@ -36,7 +36,7 @@ export default function Navbar() {
         {navLinks.map((link, i) => (
           <div key={link.label} style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
             {i > 0 && <span style={{ width: '4px', height: '4px', borderRadius: '999px', background: 'rgba(255,255,255,0.4)' }} />}
-            
+            <a
               href={link.href}
               style={{ fontSize: '14px', fontWeight: 500, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', whiteSpace: 'nowrap', transition: 'color 0.2s ease' }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = INK }}
@@ -49,7 +49,7 @@ export default function Navbar() {
       </div>
 
       {/* Resume CTA */}
-      
+      <a
         href="/resume.pdf"
         download
         style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '999px', border: '1px solid rgba(255,255,255,0.28)', fontSize: '13px', fontWeight: 600, color: INK, textDecoration: 'none', transition: 'border-color 0.2s ease, background 0.2s ease' }}
