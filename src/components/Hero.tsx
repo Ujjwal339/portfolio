@@ -122,9 +122,9 @@ export default function Hero() {
         <motion.div
           className="hidden lg:flex"
           initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
-          style={{ flexDirection: 'column', alignItems: 'center', gap: '14px', flexShrink: 0, marginLeft: 'auto', marginRight: '2vw' }}
+          style={{ flexDirection: 'column', alignItems: 'center', gap: '14px', flexShrink: 0, marginLeft: 'auto', marginRight: '20vw' }}
         >
-          <div style={{ position: 'relative', width: '200px', height: '200px', borderRadius: '999px', padding: '3px', background: `conic-gradient(from 210deg, ${ACCENT}, rgba(255,255,255,0.5), ${ACCENT})`, boxShadow: '0 0 44px rgba(201,138,84,0.25)' }}>
+          <div style={{ position: 'relative', width: '260px', height: '260px', borderRadius: '999px', padding: '3px', background: `conic-gradient(from 210deg, ${ACCENT}, rgba(255,255,255,0.5), ${ACCENT})`, boxShadow: '0 0 44px rgba(201,138,84,0.25)' }}>
             <div style={{ width: '100%', height: '100%', borderRadius: '999px', overflow: 'hidden', border: '3px solid #050506', background: 'radial-gradient(circle at 40% 30%, #1a1512 0%, #0a0908 60%, #050506 100%)' }}>
               <img
                 src="/photo.jpg"
