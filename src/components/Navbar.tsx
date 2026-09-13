@@ -12,8 +12,9 @@ const navLinks = [
 export default function Navbar() {
   return (
     <motion.div
+      className="px-5 py-4 md:px-10 md:py-[22px]"
       initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }}
-      style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '22px 40px' }}
+      style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
     >
       {/* Logo — chip/IC line-mark */}
       <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
@@ -30,12 +31,12 @@ export default function Navbar() {
         <span style={{ fontSize: '19px', fontWeight: 600, color: INK, letterSpacing: '-0.01em' }}>Ujjwal Kumar</span>
       </a>
 
-      {/* Center links with dots */}
-      <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', gap: '18px' }}>
+      {/* Center links with dots — hidden on small screens to avoid crowding the logo/resume button */}
+      <div className="hidden md:flex" style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', alignItems: 'center', gap: '18px' }}>
         {navLinks.map((link, i) => (
           <div key={link.label} style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
             {i > 0 && <span style={{ width: '4px', height: '4px', borderRadius: '999px', background: 'rgba(255,255,255,0.4)' }} />}
-            <a
+            
               href={link.href}
               style={{ fontSize: '14px', fontWeight: 500, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', whiteSpace: 'nowrap', transition: 'color 0.2s ease' }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = INK }}
@@ -48,7 +49,7 @@ export default function Navbar() {
       </div>
 
       {/* Resume CTA */}
-      <a
+      
         href="/resume.pdf"
         download
         style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '999px', border: '1px solid rgba(255,255,255,0.28)', fontSize: '13px', fontWeight: 600, color: INK, textDecoration: 'none', transition: 'border-color 0.2s ease, background 0.2s ease' }}
